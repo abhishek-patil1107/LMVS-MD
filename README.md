@@ -63,8 +63,8 @@ repositories used:
 
 ## Quick Reproduction
 1. clone this directory and simply run the pnp.py script after having installed Mujoco.
-![](01.jpg)
-![](02.jpg)
+![](01.png)
+![](02.png)
 ## Contact
 For algorithm/code questions, mention this repo and provide sample images. Good luck!
 
