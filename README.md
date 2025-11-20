@@ -27,10 +27,10 @@ repositories used:
 
 Steps taken
 
-Create python environment
-Install requirements
-Perform 3D reconstruction
-Import reconstruction to Meshlab
-Edit meshes in Meshlab
-Flatten bottom surface in Blender
-Import mesh into MuJoCo simulation for Pick and Place operation
+1. Create python environment
+2. Install requirements
+3. Perform 3D reconstruction
+4. Import reconstruction to Meshlab
+5. Edit meshes in Meshlab
+6. Flatten bottom surface in Blender
+7. Import mesh into MuJoCo simulation for Pick and Place operation
