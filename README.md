@@ -13,6 +13,8 @@ Examples of learnable patterns:
 3. Depth compression at distance follows power law
 4. Edge sharpness correlates with image gradients
 
+Perhaps by having algorithms learn these patterns, we can lower the reconstruction time by a lot.
+
 
 
 Applications/Software used: 
@@ -25,7 +27,8 @@ repositories used:
 2. Colmap - https://github.com/colmap/colmap
 3. Simple-MuJoCo-PickNPlace - https://github.com/volunt4s/Simple-MuJoCo-PickNPlace
 
-Steps taken
+
+## Steps taken:
 
 1. Create python environment
 2. Install requirements
@@ -34,3 +37,34 @@ Steps taken
 5. Edit meshes in Meshlab
 6. Flatten bottom surface in Blender
 7. Import mesh into MuJoCo simulation for Pick and Place operation
+
+![Example image from the mip-Nerf360 dataset](/assets/images/DSC07957.JPG)
+
+## What this repo contains
+- Scripts to run a COLMAP reconstruction from an image folder(images taken from the mip-Nerf360 dataset https://jonbarron.info/mipnerf360/), postprocess the dense mesh, and run a MuJoCo pick-and-place evaluation.
+
+## Requirements
+- Ubuntu (tested on 24.04)
+- Python 3.12
+- COLMAP installed and on PATH (https://github.com/colmap/colmap)
+- MeshLab (for manual edits)
+- Blender (for base flattening)
+- MuJoCo
+
+## Quick setup
+1. Install COLMAP, GLOMAP, MiDaS, MuJoCo, Blender, MeshLab per their docs.
+2. Put images in `assets`.
+3. Run reconstruction:
+    python midas_integrated_pipeline.py
+4. Open `reconstruction.ply` with MeshLab and Blender for final edits (flatten base, fill holes, reorient mesh).
+5. Place in sim_work/Simple-MuJoCo-PickNPlace/asset/panda/assets and run:
+    python pnp.py
+6. Remember to change file names accordingly within the python scripts and the object xml files.
+
+## Quick Reproduction
+1. clone this directory and simply run the pnp.py script after having installed Mujoco.
+
+## Contact
+For algorithm/code questions, mention this repo and provide sample images. Good luck!
+
+
