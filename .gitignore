@@ -1,0 +1,5 @@
+# COLMAP's feature database (473 MB, over GitHub's 100 MB file limit); COLMAP can rebuild it from the images
+assets/SIMPLE4/database.db
+
+# Python's compiled caches
+__pycache__/
